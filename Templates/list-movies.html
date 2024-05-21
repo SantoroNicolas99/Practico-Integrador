@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/img/Cuevana.ico" type="image/x-icon">
+    <title>Cuevana 5</title>
+    <!-- vinculación fontawesome -->
+    <script src="https://kit.fontawesome.com/fa04600604.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Logo -->
+            <div>
+                <a href="../index.html">
+                    <span>cuevana</span>
+                    <i class="fa-solid fa-5"></i>
+                </a>
+            </div>
+            <!-- hipervínculos del menú -->
+            <ul class="nav-links">
+                <li><a href="../index.html">Tendencias</a></li>
+                <li><a href="#" class="btn-cuevana">Registrarse</a></li>
+                <li>
+                    <a href="#">
+                        <!-- Luego se aplicará un estilo especifico al texto -->
+                      <i class="fas fa-sign-in-alt"></i>
+                      <span class="login-text">Iniciar sesión</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido -->
+    <main>
+        <section id="form">
+            <!-- Division contenedora -->
+            <div>
+                <!-- Entrada para la películaa -->
+                <div>
+                    <label for="">Título</label>
+                    <input type="text" class="input-search" name="title" id="title">
+                </div>
+
+                <!-- Selección de género de películas -->
+                <div>
+                    <label for="">Genero</label>
+                    <select name="genre" id="genre" class="form-select">
+                        <option value="">Seleccione</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Comedia">Comedia</option>
+                        <option value="Superheroes">Superheroes</option>
+                    </select>
+                </div>
+                <button>Agregar</button>
+            </div>
+
+        </section>
+
+        <!-- Listado de películas -->
+        <section id="lsit">
+            <h2 >Listado de peliculas</h2>
+            <table id="list-table-movies" >
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Género</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <br>
+            <div id="list-div-movies"></div>
+        </section>
+    </main>
+    
+    <!-- Pie de página -->
+    <footer id="footer">
+        <a href="">Términos y condiciones</a>
+        <a href="">Preguntas Frecuentes</a>
+        <a href="">Ayuda</a>
+    </footer>
+    
+</body>
+</html>
