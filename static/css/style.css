@@ -46,6 +46,21 @@ h2{
     border-radius: 8px;
 }
 
+.button-search{
+   
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: #FFF;
+}
+
+.adv-bus{
+   color: #aa4be9;
+   margin-top: 5px;
+   padding: 10px;
+   height: 5px;
+}
+
 .movie-item-img{
     width: 200px;
     height: 300px;
@@ -76,13 +91,13 @@ el encabezado cambie de color */
     box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.5);
 }
 
-/* PLAN DE ESTUDIOS: Modelo de caja y 
+/* Modelo de caja y 
 posicionamiento. Modelo de caja y propiedades.
 Posicionamiento y visualización.  */
 
 /* Estilo al encabezado, agregar estilos por el selector de clase:
 color de fondo, color fuente, posición del 
-encabezado, ancho y z-index -------------------------------------------*/
+encabezado, ancho y z-index */
 
 .header{
     background-color: transparent;
@@ -243,6 +258,10 @@ repetitivo, mejorando la interacción visual cuando se interactúa con ese eleme
     border: 2px solid var(--secondary-color);
 }
 
+.button-search:hover{
+    color: var(--secondary-color)!important;
+    border: 2px solid white;
+}
 .card-banner h1{
     color: #FFF;
     font-size: 4vw;
