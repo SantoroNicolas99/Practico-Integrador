@@ -3,9 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/img/Cuevana.ico" type="image/x-icon">
     <title>Cuevana 5</title>
+    <!-- vinculación fontawesome -->
+    <script src="https://kit.fontawesome.com/fa04600604.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+    <!-- Encabezado -->
+    <header>
+        <nav>
+            <!-- Logo -->
+            <div>
+                <a href="../index.html">
+                    <span>cuevana</span>
+                    <i class="fa-solid fa-5"></i>
+                </a>
+            </div>
+            <!-- hipervínculos del menú -->
+            <ul class="nav-links">
+                <li><a href="../index.html">Tendencias</a></li>
+                <li><a href="#" class="btn-cuevana">Registrarse</a></li>
+                <li>
+                    <a href="#">
+                        <!-- Luego se aplicará un estilo especifico al texto -->
+                      <i class="fas fa-sign-in-alt"></i>
+                      <span class="login-text">Iniciar sesión</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Contenido -->
+    <main>
+        <!-- banner-movie: mostrar imagen -->
+        <section id="banner-movie">
+            <!-- División contenedora -->
+            <div>
+                <!-- Division para movie-detail espacio para dos partes una para poster y otra para descripción -->
+                <div>
+                    <!-- Para poster -->
+                    <div>
+                        <img src="../static/img/Señor de los anillos.jpg" alt="">
+                    </div>
+                    <!-- Info -->
+                    <div>
+                        <!-- Para titulo, año, tipo -->
+                        <div>
+                        <h2>The Lord of The Rings. Movie <span>(2003)</span></h2>
+                        <p>17/12/2003 • Animation, Adventure, Fantasy • 200min</p>
+                        </div>
+                        <!-- Descripción de la trama -->
+                        <div>
+                            <h3>Overview</h3>
+                            <p>The battle for Middle Earth has begun. Saruman's 
+                                forces have been destroyed and for the first time 
+                                there seems to be a small hope. However, Sauron's 
+                                power grows and his interest focuses on Gondor, the
+                                last stronghold of men, whose heir is Aragorn. Meanwhile,
+                                Frodo and Sam, guided by Gollum, continue their dangerous
+                                mission through Mordor to destroy the ring.</p>
+                        </div>
+                        <!-- Créditos -->
+                        <div>
+                            <!-- Info director -->
+                            <div>
+                                <p>Peter Jackson</p>
+                                <p>Director</p>
+                            </div>
+                            <!-- Info escritor -->
+                            <div>
+                                <p>Philippa Boyens</p>
+                                <p>Writer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- more-info: mostrar info de la película -->
+        <section id="more-info">
+            <!-- Division contenedora -->
+            <div>
+                <!-- División para más info de las películas -->
+                <div>
+                    <h3>Ver trailer</h3>
+                    <!-- Video de tráiler -->
+                    <div>
+                        <iframe type="text/html" style="background-color: #000;" width="100%" height="315" src="https://www.youtube.com/embed/r5X-hFf6Bwo?si=CzoF61B61bwvzBKs" title="YouTube video player" frameborder="0" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+
+                <!-- Más info -->
+                <div>
+                    <!-- Lista: redes sociales 
+                        se agregarán iconos-->
+                        <div>
+                            <ul>
+                                <li><a href="" target="_blank">Facebook</a></li>
+                                <li><a href="" target="_blank">Twiter</a></li>
+                                <li><a href="">Instagram</a></li>
+                                <li><a href="">Movie</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Tabla con más info -->
+                        <div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Info</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Status</strong></td>
+                                        <td>Released</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Original Language</strong></td>
+                                        <td>English</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Budget</strong></td>
+                                        <td> $100.000.000,00</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Revenue</strong></td>
+                                        <td> $1.347.013.866,00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <a href="">Términos y condiciones</a>
+        <a href="">Preguntas Frecuentes</a>
+        <a href="">Ayuda</a>
+    </footer>
     
 </body>
 </html>
