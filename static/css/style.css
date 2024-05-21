@@ -1,0 +1,107 @@
+/* CSS estilos */
+
+:root{
+    --bg-color:#0a0b3dfb;
+    --primary-color:#05335e;
+    --secondary-color:#ffc098;
+    --third-color:#0571c9;
+    --third-bis-color:#db4648f2;
+    --bg-input-color:#4f31572c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Eliminar la decoración de los 
+hipervínculos, agregar color y tamaño de 
+fuente a la etiqueta <h2></h2> */
+a{
+    text-decoration: none;
+}
+
+h1{
+    color: #FFF;
+    font-size: 3vw;
+}
+
+h2{
+    color: #FFF;
+    font-size: 2vw;
+}
+
+#logo{
+    font-weight: bold;
+}
+
+.search-title{
+    color: white;
+    font-size: 3vw;
+}
+
+.cuevana-logo{
+    width: 30px;
+    height: 30px;
+}
+
+.movie-item-img{
+    width: 200px;
+    height: 300px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+/* Unidades de medida. Colores CSS.
+  Fondos en CSS. Fuentes y tipografías. 
+  Estilos para textos y listas. Íconos */
+
+body{
+    background-color: var(--bg-color);
+    font-family: 'Nunito', sans-serif, 'poppins';
+}  
+
+/* Estilo que se usrá desde js para que al recorrer la página 
+el encabezado cambie de color */
+.scrolled{
+    background-color: var(--third-color);
+}
+
+#banner{
+    background-image: url(https://cloudfront-us-east-1.images.arcpublishing.com/lanacionpy/CCBJ5IMQYJCUXC23FO5E22NIXE.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    box-shadow: inset 0 0 0 2000px rgba(84, 84, 84, 0.5);
+}
+
+/* PLAN DE ESTUDIOS: Modelo de caja y 
+posicionamiento. Modelo de caja y propiedades.
+Posicionamiento y visualización.  */
+
+/* Estilo al encabezado, agregar estilos por el selector de clase:
+color de fondo, color fuente, posición del 
+encabezado, ancho y z-index -------------------------------------------*/
+
+.header{
+    background-color: transparent;
+    color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.btn-cuevana{
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: #FFF;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Alinea al centro el botón de registrarse */
