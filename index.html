@@ -70,128 +70,18 @@
             </div>
             
         </section>
+        
         <!-- TENDENCIAS CON API -->
-        <div>
-        <script src="./fetch.js"></script>
-        <h2>Las tendencias de hoy</h2>
-        </div>
-
-
-
-
-        <!-- popular: mostrar imágenes de las peliculas
-            con tendencia hoy -->
-        <section id="popular">
-            <!-- Division contenedora del titulo e imagenes -->
-            <div class="container" class="movies-grid">
-                <h2>Las tendencias de hoy</h2>
-                <!-- Div para mostrar todas las imagenes e info de pelicluas -->
-                <div id="list-popular">
-                    <!-- Division que mostrará imagen y detalle de la pelicula, mismo formato para todas las peliculas -->
-                    <!-- pelicula 01 -->
-                    <div class="movie-item">
-                        <a href="./Templates/detail-movie.html">
-                            <img src="./static/img/Dune-2.jpg" alt="" class="movie-item-img">
-                            <div class="movie-item-detail">
-                                <p class="movie-item-detail-title">Dune 2. Movie</p>
-                                <p class="movie-item-detail-subtitle">2024 - 8.9</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- pelicula 02 -->
-                    <div class="movie-item">
-                        <a href="./Templates/detail-movie.html">
-                            <img src="./static/img/cazafantasmas.jpg" alt="" class="movie-item-img">
-                            <div class="movie-item-detail">
-                                <p class="movie-item-detail-title">Caza fantasmas. Movie</p>
-                                <p class="movie-item-detail-subtitle">2024 - 7.4</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- pelicula 03 -->
-                    <div class="movie-item">
-                        <a href="./Templates/detail-movie.html">
-                            <img src="./static/img/Garfield.jpg" alt="" class="movie-item-img">
-                            <div class="movie-item-detail">
-                                <p class="movie-item-detail-title">Garfield. Movie</p>
-                                <p class="movie-item-detail-subtitle">2024 - 8.3</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- pelicula 04 -->
-                    <div class="movie-item">
-                        <a href="./Templates/detail-movie.html">
-                            <img src="./static/img/godzilla-vs-kong.jpg" alt="" class="movie-item-img">
-                            <div class="movie-item-detail">
-                                <p class="movie-item-detail-title">Gozilla vs Kong. Movie</p>
-                                <p class="movie-item-detail-subtitle">2024 - 8.8</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- pelicula 05 -->
-                    <div class="movie-item">
-                        <a href="./Templates/detail-movie.html">
-                            <img src="./static/img/kung-fu-panda.jpg" alt="" class="movie-item-img">
-                            <div class="movie-item-detail">
-                                <p class="movie-item-detail-title">Kung Fu Panda 4. Movie</p>
-                                <p class="movie-item-detail-subtitle">2024 - 8.9</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- pelicula 06 -->
-                    <div class="movie-item">
-                        <a href="./Templates/detail-movie.html">
-                            <img src="./static/img/Oppenheimer.jpg" alt="" class="movie-item-img">
-                            <div class="movie-item-detail">
-                                <p class="movie-item-detail-title">Oppenheimer. Movie</p>
-                                <p class="movie-item-detail-subtitle">2024 - 9.5</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- pelicula 07 -->
-                    <div class="movie-item">
-                        <a href="./Templates/detail-movie.html">
-                            <img src="./static/img/Planeta-de-lod-Simios.jpg" alt="" class="movie-item-img">
-                            <div class="movie-item-detail">
-                                <p class="movie-item-detail-title">Planeta de los Simios. Movie</p>
-                                <p class="movie-item-detail-subtitle">2024 - 8.7</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- pelicula 08 -->
-                    <div class="movie-item">
-                        <a href="./Templates/detail-movie.html">
-                            <img src="./static/img/Rocky.jpg" alt="" class="movie-item-img">
-                            <div class="movie-item-detail">
-                                <p class="movie-item-detail-title">Rocky. Movie</p>
-                                <p class="movie-item-detail-subtitle">2024 - 8.9</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- pelicula 09 -->
-                    <div class="movie-item">
-                        <a href="./Templates/detail-movie.html">
-                            <img src="./static/img/Señor de los anillos.jpg" alt="" class="movie-item-img">
-                            <div class="movie-item-detail">
-                                <p class="movie-item-detail-title">Lord of The Rings. Movie</p>
-                                <p class="movie-item-detail-subtitle">2024 - 10</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- pelicula 10 -->
-                    <div class="movie-item">
-                        <a href="./Templates/detail-movie.html">
-                            <img src="./static/img/Star-wars.jpg" alt="" class="movie-item-img">
-                            <div class="movie-item-detail">
-                                <p class="movie-item-detail-title">Star Wars. Movie</p>
-                                <p class="movie-item-detail-subtitle">2024 - 9.4</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Fin de peliculas -->
-                </div>
+        <section id="tendencias" data-aos="fade-up" data-aos-offset="400" data-aos-delay="100" data-aos-duration="1000" class="peliculasTendencia">
+            <h2 class="tituloSection">Las tendencias de hoy</h2>
+            <div class="peliculas" id="tendenciasContainer">
+                <!-- Aquí se cargarán las películas tendencia -->
             </div>
-        </section>  
+            <button class="boton anterior">Anterior</button>  
+            <button class="boton siguiente">Siguiente</button>
+        </section>
+        <script src="./fetch.js"></script>
+
         
         <!-- top-rated: mostrar las películas más aclamadas -->
 

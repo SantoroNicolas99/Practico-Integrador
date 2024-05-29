@@ -517,3 +517,12 @@ y series ilimitadas */
 .d-iframe{
     width: 100%;
 } 
+
+
+/* ESTILOS PARA EL FETCH */
+
+.peliculasTendencia{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}

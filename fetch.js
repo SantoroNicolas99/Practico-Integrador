@@ -1,46 +1,128 @@
-// Tendencias con la utilización de API 
+// Definimos la URL base de la API de The Movie DB
+const API_SERVER = 'https://api.themoviedb.org/3'; 
+
+
 const options = {
-    method: 'GET',
+    method: 'GET', // Método de la petición (GET)
     headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer b801b643a02ea6a26379208e34d3fa9f'
+        accept: 'application/json', // Tipo de respuesta esperada (JSON)
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiODAxYjY0M2EwMmVhNmEyNjM3OTIwOGUzNGQzZmE5ZiIsInN1YiI6IjY2NTUwZmIxZDU4MGQ1NTg1YzhjYWQwZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.fWlOOC0VIjUIKydCfz2CgQS7ztxjdAhDEzcCPf6vE0A'
+        
     }
-  };
-  
-  fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US')
-    .then(function (respuesta) {
-        return respuesta.json();
-    })
-    .then(function (objeto) {
-        console.log(objeto.name)
-    })
-    .catch(function(error){
-        console.error(error);
+};
+
+// Función para crear elementos HTML
+const createElement = (tag, className, attributes = {}) => {
+    
+    const element = document.createElement(tag);
+    
+    if (className) {
+        element.classList.add(className);
+    }
+    
+    // Iteramos sobre los atributos pasados como argumento y los añadimos al elemento
+    Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, value));
+    
+    // Devolvemos el elemento creado
+    return element;
+};
+
+// Función para cargar películas en la cuadrícula de tendencias
+const fetchMoviesGrid = async (page = 1) => {
+    // Se realiza una petición fetch a la API para obtener las películas populares
+    const response = await fetch(`${API_SERVER}/movie/popular?page=${page}`, options);
+    
+    // Convertimos la respuesta a JSON
+    const data = await response.json();
+    
+    // Extraemos las películas de la respuesta
+    const movies = data.results;
+
+    // Seleccionamos el contenedor de películas de tendencia en el DOM
+    const tendenciasContainer = document.querySelector('.peliculasTendencia .peliculas');
+    
+    // Limpiamos el contenido previo del contenedor
+    tendenciasContainer.innerHTML = '';
+
+    // Iteración sobre cada peli
+    movies.forEach(movie => {
+        // Creamos los elementos HTML para mostrar la película
+        const pelicula = createElement('div', 'pelicula');
+        const anchor = createElement('a', '');
+        anchor.href = './Templates/detail-movie.html';
+        const img = createElement('img', 'imgTendencia', {
+            src: `https://image.tmdb.org/t/p/w500/${movie.poster_path}`,
+            alt: movie.title,
+            loading: 'lazy'
+        });
+        const tituloPelicula = createElement('div', 'tituloPelicula');
+        const titulo = createElement('h4', '');
+        titulo.textContent = movie.title;
+        
+        // Agregamos los elementos al DOM
+        // Cracioón de un contenedor para la película dentro del enlace
+        tituloPelicula.appendChild(titulo); // Agregamos el título de la película al contenedor de título
+        pelicula.append(img, tituloPelicula); // Agregamos la imagen y el contenedor de título a la película
+        anchor.appendChild(pelicula); // Agregamos la película al enlace
+        const peliculaWrapper = createElement('div', 'peliculas'); // Creamos un contenedor adicional para la película
+        peliculaWrapper.appendChild(anchor); // Agregamos el enlace con la película al contenedor adicional
+        tendenciasContainer.appendChild(peliculaWrapper); // Agregamos el contenedor adicional al contenedor de tendencias
     });
 
-//Funcion para renderizar las películas en tendencia
-function tendencias(){
-    fetch("https://api.themoviedb.org/3/trending/movie/{time_window}")
-    .then(function(respuesta){
-        return respuesta.json();
-    })
-    .then(function(peliculas){
-        //manipulación del DOM
-        const contenedor = document.getElementById("contenedor-peliculas");
+    // Actualizamos el atributo data-page con el número de página actual
+    tendenciasContainer.parentElement.setAttribute('data-page', page);
+};
 
-        //bucle for-each
-        peliculas.results.forEach(function(dato){
-            //creacion de <article>
-            const article = document.createElement("article");
-            //estilo a article
-            article.classList.add("tarjeta");
-            //contenido dentro de la tarjeta article
-            article.innerHTML = `
-            <img src="${dato.poster_path}" alt="Imagen de la pelicula ${dato.title}" class="movie_img-size">
-            <label>
-            `;
-        })
-    })
-    .catch()
+// Función para cargar películas en el carrusel de películas aclamadas
+const fetchMoviesFlex = async () => {
+    // Realizamos una petición fetch a la API para obtener las películas más aclamadas
+    const response = await fetch(`${API_SERVER}/movie/top_rated`, options);
+    
+    // Convertimos la respuesta a JSON
+    const data = await response.json();
+    
+    // Extraemos las películas de la respuesta
+    const movies = data.results;
 
-}
+    // Seleccionamos el contenedor de películas aclamadas en el DOM
+    const aclamadasContainer = document.querySelector('.aclamadas');
+    
+    // Iteramos sobre cada película obtenida
+    movies.forEach(movie => {
+        // Creamos los elementos HTML para mostrar la película
+        const peliculaItem = createElement('div', 'peliculaItem');
+        const img = createElement('img', 'imgAclamada', {
+            src: `https://image.tmdb.org/t/p/w500/${movie.poster_path}`,
+            alt: movie.title,
+            loading: 'lazy'
+        });
+        
+        // Agregamos los elementos al DOM
+        peliculaItem.appendChild(img); // Agregamos la imagen al contenedor de la película
+        aclamadasContainer.appendChild(peliculaItem); // Agregamos el contenedor de la película al contenedor de películas aclamadas
+    });
+};
+
+// Event listener para el botón "Anterior"
+document.querySelector('.anterior').addEventListener('click', () => {
+    // Obtener el número de página actual
+    let currentPage = Number(document.querySelector('.peliculasTendencia').getAttribute('data-page'));
+    // Si es la primera página, no hacemos nada
+    if (currentPage <= 1) return;
+    // Cargar las películas de la página anterior
+    fetchMoviesGrid(currentPage - 1);
+});
+
+// Event listener para el botón "Siguiente"
+document.querySelector('.siguiente').addEventListener('click', () => {
+    // Obtener el número de página actual
+    let currentPage = Number(document.querySelector('.peliculasTendencia').getAttribute('data-page'));
+    // Cargar las películas de la página siguiente
+    fetchMoviesGrid(currentPage + 1);
+});
+
+// Ejecutamos las funciones de carga de películas al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    fetchMoviesGrid();
+    fetchMoviesFlex();
+});
