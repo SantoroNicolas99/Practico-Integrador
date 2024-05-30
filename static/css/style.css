@@ -272,27 +272,19 @@ repetitivo, mejorando la interacción visual cuando se interactúa con ese eleme
 }
 
 
-#popular,#top-rated{
+.tendencias{
     text-align: center;
 }
 
-#popular h2,#top-rated h2{
-    margin: 30px 0px;
+.tituloSection{
+    margin: 10px;
+    padding: 20px;
+    grid-column-start: 3;
+    grid-column-end: 5;
 }
 
-/* Posicion de las mas vistas */
-.movie-item{
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    width: 200px;
-    height: 300px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 450ms;
-    -webkit-transform-origin: center left;
-            transform-origin: center left;
+.tendencias h2{
+    margin: 30px 0px;
 }
 
 
@@ -302,11 +294,6 @@ repetitivo, mejorando la interacción visual cuando se interactúa con ese eleme
 
 .movie-item:hover .movie-item-detail{
     bottom: 0;
-}
-
-/* Agrega una estrella al lado del subtitulo */
-.movie-item-detail-subtitle::after{
-    content: '🌟';
 }
 
 #footer a {
@@ -520,9 +507,41 @@ y series ilimitadas */
 
 
 /* ESTILOS PARA EL FETCH */
-
+ 
+/* section */
 .peliculasTendencia{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+    padding: 0;
     text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    display: grid;
+    /*division en columnas*/
+    grid-template-columns: repeat(6, 1fr);
+    /*cuantas columnas ocupa el padre*/
+    grid-column-start: 1;
+    grid-column-end: -1; 
+    /* filas */
+    grid-template-rows: 150px 1fr 1fr 1fr 1fr;
+    /*calor del gap*/
+    gap: 10px;
+
+}
+
+
+.tendenciasContainer{ 
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 5; /*el numero corresponde al gap que limita la columna*/
+    
+}
+
+.peliculas{
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: -1;
+    flex-wrap: wrap;
 }
