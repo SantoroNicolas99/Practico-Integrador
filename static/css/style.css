@@ -32,6 +32,13 @@ h2{
 
 #logo{
     font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text{
+    align-items: center;
+    justify-content: center;
 }
 
 .search-title{
@@ -508,6 +515,11 @@ y series ilimitadas */
 
 /* ESTILOS PARA EL FETCH */
  
+/* titulo */
+.tituloSection{
+    text-align: center;
+    justify-content: center;
+}
 /* section */
 #tendenciasContainer{
     width: 80%;
@@ -549,3 +561,5 @@ y series ilimitadas */
         max-width: 150px; /* Cambia el tamaño máximo a 150px */
     }
 }
+
+

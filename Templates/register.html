@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- vinculación con estilos y favicon -->
-    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="../static/css/register.css">
     <link rel="shortcut icon" href="../static/img/Cuevana.ico" type="image/x-icon">
     <title>Cuevana 5</title>
     <!-- vinculación con google-fonts -->
@@ -20,6 +20,7 @@
             <!-- Logo -->
             <div id="logo">
                 <a href="../index.html">
+                    <img src="../static/img/Cuevana.ico" alt="" class="cuevana-logo">
                     <span class="logo-text">cuevana</span>
                     <i class="fa-solid fa-5"></i>
                 </a>
@@ -45,7 +46,7 @@
 
         <!-- form-wrapper: formulario -->
         <section id="form-wrapper">
-            <form action="#" id="formRegister" method="GET" novalidate>
+            <form action="#" id="formRegister">
                 <div class="form-control">
                     <label>Nombre</label>
                     <input type="text" required name="firstname" id="firstname">
@@ -91,7 +92,7 @@
                         <label for="terms">Acepto términos y condiciones</label>
                     </div>
                 </div>
-                <button type="submit">Registrarse</button>
+                <button type="submit" id="submit" class="submit-button">Registrarse</button>
                 <div class="form-help">
                     <a href="#">Necesitas ayuda?</a>
                 </div>

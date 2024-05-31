@@ -1,0 +1,130 @@
+/* CSS estilos */
+/* -------------------- Estilos para Register -----------------------*/
+:root{
+    --bg-color:#0a0b3dfb;
+    --primary-color:#05335e;
+    --secondary-color:#aa4be9;
+    --third-color:#0571c9;
+    --third-bis-color:#591da8f2;
+    --bg-input-color:#4f31572c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1{
+    color: #FFF;
+    font-size: 3vw;
+}
+
+h2{
+    color: #FFF;
+    font-size: 2vw;
+}
+
+#logo{
+    font-weight: bold;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.logo-text, i{
+    color: #FFF;
+}
+
+.cuevana-logo{
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: 'Nunito', sans-serif, 'poppins';
+}  
+
+.form-control{
+     color: #FFF;
+     font-family: 'Nunito', sans-serif, 'poppins';
+}
+
+
+.header{
+    background-color: transparent;
+    color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+section{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-items: center;
+}
+
+form{
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+}
+
