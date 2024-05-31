@@ -573,6 +573,7 @@ button.boton.anterior{
     font-weight: bold;
     background-color: rgb(25, 104, 141);
     border-color: transparent;
+    cursor: pointer;
 }
 
 button.boton.siguiente{
@@ -586,8 +587,13 @@ button.boton.siguiente{
     font-weight: bold;
     background-color: rgb(25, 104, 141);
     border-color: transparent;
+    cursor: pointer;
 }
 
 h4{
     color: #FFF;
+}
+
+.h2-aclamadas{
+    text-align: center;
 }
