@@ -524,12 +524,12 @@ y series ilimitadas */
   
   .pelicula {
     flex: 0 0 calc(20% - 40px); /* Ancho de 20% con espacio entre ellas */
-    margin: 5px; /* Espacio entre las películas */
+    margin: 15px; /* Espacio entre las películas */
     background-color: #0e032254;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
-    max-width: 300px; /* Establecí un tamaño máximo para las películas */
+    max-width: 200px; /* Establecí un tamaño máximo para las películas */
     max-height: 300px; /* Establecí un tamaño máximo para las películas */
   }
 
@@ -537,3 +537,15 @@ y series ilimitadas */
     max-width: 100%;
     height: auto;
   }
+
+  /* Media Query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    #tendenciasContainer {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Cambia el ancho mínimo a 150px */
+    }
+
+    .pelicula {
+        flex: 0 0 calc(33.33% - 20px); /* Cambia el ancho a 33.33% */
+        max-width: 150px; /* Cambia el tamaño máximo a 150px */
+    }
+}
