@@ -21,12 +21,21 @@ a{
 
 h1{
     color: #FFF;
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 h2{
     color: #FFF;
     font-size: 2vw;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+h3{
+    color: #FFF;
+    font-size: 1.5vw;
+    text-align: center;
+    margin-bottom: 2vh;
 }
 
 #logo{
@@ -37,6 +46,7 @@ h2{
 
 .logo-text, i{
     color: #FFF;
+    font-size: 2.5vh;
 }
 
 .cuevana-logo{
@@ -50,6 +60,8 @@ h2{
 body{
     background-color: var(--bg-color);
     font-family: 'Nunito', sans-serif, 'poppins';
+    margin: 0;
+    padding: 0;
 }  
 
 .form-control{
@@ -114,17 +126,68 @@ nav {
 }
 
 section{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     display: flex;
     text-align: center;
     align-content: center;
     justify-items: center;
+    padding-bottom: 10px;
+    background-color: var(--primary-color);
 }
 
 form{
-    width: 80%;
-    max-width: 400px;
+    width: 40%;
+    margin: 1.5vh auto auto auto;
+    background-color: #0427446c;
+    border-radius: 15px;
+}
+
+.form-control{
+    
+    margin: 20px;
+}
+
+input{
+    display: flex;
+    padding: 5px;
+    border-radius: 5px;
     margin: auto;
+}
+
+.form-select{
+    padding: 5px 45px;
+}
+
+.terms input[type="checkbox"], .terms label{
+    display: inline;
+    color: #FFF;
+}
+
+
+.submit-button {
+    display: flex;
+    width: 150px;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-left: 40%;
+    margin-bottom: 5px;
+    padding: 0.75rem;
+    background: rgb(87, 145, 212);
+    border-radius: 10px;
+    cursor: pointer;
+    color: #FFF;
+    position: relative;
+    align-items: center;
+  }
+
+footer a, .form-help a{
+    color: #FFF;
+}
+
+footer{
+    height: 1vh;
+    padding-top: 50px;
+    text-align: center;
 }
 

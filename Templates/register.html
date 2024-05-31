@@ -43,28 +43,29 @@
 
     <!-- Contenido -->
     <main>
-
+        <h2>Registrándote obtendrás numerosos beneficios</h2>
+        <h3>Gratis y Seguro</h3>
         <!-- form-wrapper: formulario -->
         <section id="form-wrapper">
             <form action="#" id="formRegister">
                 <div class="form-control">
                     <label>Nombre</label>
-                    <input type="text" required name="firstname" id="firstname">
+                    <input type="text" required name="firstname" id="firstname" placeholder="Ingrese su Nombre">
                 </div>
                 <div class="error" id="error-firstname"></div>
                 <div class="form-control">
                     <label>Apellido</label>
-                    <input type="text" required name="lastname" id="lastname">
+                    <input type="text" required name="lastname" id="lastname" placeholder="Ingrese su Apellido">
                 </div>
                 <div class="error" id="error-lastname"></div>
                 <div class="form-control">
                     <label>Email</label>
-                    <input type="email" required name="email" id="email">
+                    <input type="email" required name="email" id="email" placeholder="Ingrese su Email">
                 </div>
                 <div class="error" id="error-email"></div>
                 <div class="form-control">
                     <label>Contraseña</label>
-                    <input type="password" required name="password" id="password">
+                    <input type="password" required name="password" id="password" placeholder="Ingrese una contraseña">
                 </div>
                 <div class="error" id="error-password"></div>
                 <div class="form-control">
@@ -89,7 +90,7 @@
                 <div class="form-terms">
                     <div class="terms">
                         <input type="checkbox" id="terms">
-                        <label for="terms">Acepto términos y condiciones</label>
+                        <label for="terms" class="terms">Acepto términos y condiciones</label>
                     </div>
                 </div>
                 <button type="submit" id="submit" class="submit-button">Registrarse</button>
@@ -100,5 +101,10 @@
 
         </section>
     </main>
+    <footer>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Preguntas Frecuentes</a>
+        <a href="#">Ayuda</a>
+    </footer>
 </body>
 </html>
