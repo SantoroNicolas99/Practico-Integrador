@@ -1,0 +1,227 @@
+/* CSS estilos */
+/* -------------------- Estilos para Detail-movie -----------------------*/
+:root{
+    --bg-color:#0a0b3dfb;
+    --primary-color:#05335e;
+    --secondary-color:#aa4be9;
+    --third-color:#0571c9;
+    --third-bis-color:#591da8f2;
+    --bg-input-color:#4f31572c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1{
+    color: #FFF;
+    font-size: 2vw;
+}
+
+h2{
+    color: #FFF;
+    font-size: 2vw;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+h3{
+    color: #FFF;
+    font-size: 1.5vw;
+    text-align: center;
+    margin-bottom: 2vh;
+    margin-bottom: 2vh;
+    padding-bottom: 10px;
+}
+
+#logo{
+    font-weight: bold;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.logo-text, i{
+    color: #FFF;
+    font-size: 2.5vh;
+}
+
+.cuevana-logo{
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+html, body{
+    background-color: var(--bg-color);
+    font-family: 'Nunito', sans-serif, 'poppins';
+    margin: 0;
+    padding: 0;
+}  
+
+.header{
+    background-color: transparent;
+    color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+footer a, .form-help a{
+    color: #FFF;
+}
+
+footer{
+    height: 1vh;
+    padding-top: 50px;
+    text-align: center;
+}
+ /* ESTILOS PARA EL BANNERMOVIE */
+#banner-movie{
+    height: 100vh;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.img-desc{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 90vh;
+    background-color: #111010;
+}
+
+.img-detail{
+    display: flex;
+    height: 80vh;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 8%;
+    margin-bottom: 10%;
+    
+}
+
+div .info-movie{
+    
+    color: antiquewhite;
+}
+
+.title-lotr{
+    padding: 10px;
+}
+
+.info-lotr{
+    text-align: center;
+    color: #FFF;
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+}
+.overview{
+    display: flex;
+    margin-left: 10px;
+    font-size: larger;
+    font-style: oblique;
+    text-decoration: underline;
+}
+.info-overview{
+    margin: 10px;
+    color: #FFF;
+    margin-bottom: 50px;
+}
+
+.info-director{
+    color: #FFF;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+.info-escritor{
+    color: #FFF;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+/* ESTILOS PARA MORE INFO */
+#more.info{
+    
+    margin-top: 100vh;
+    padding: 0;
+    height: 10vh;
+} 
+.redes {
+    text-decoration: none;
+    cursor: pointer; 
+    color: #FFF;
+    margin-left: 95px;  
+    margin-bottom: 10px;
+}
+
+.tabla{
+    color: #FFF;
+    margin: 10px;
+    align-items: center;
+    margin-left: 50rem;
+    
+}
+
+nav div a span{
+    color: #FFF;
+}
+
+.video{
+    margin-left: 5%;
+}

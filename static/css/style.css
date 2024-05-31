@@ -562,4 +562,32 @@ y series ilimitadas */
     }
 }
 
+button.boton.anterior{
+    display: inline;
+    height: 4.5vh;
+    width: 8vw;
+    margin-left: 40%;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: #FFF;
+    font-weight: bold;
+    background-color: rgb(25, 104, 141);
+    border-color: transparent;
+}
 
+button.boton.siguiente{
+    display: inline;
+    height: 4.5vh;
+    width: 8vw;
+    margin-left: 2%;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: #FFF;
+    font-weight: bold;
+    background-color: rgb(25, 104, 141);
+    border-color: transparent;
+}
+
+h4{
+    color: #FFF;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../static/img/Cuevana.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/detail-movie.css">
     <title>Cuevana 5</title>
     <!-- vinculación fontawesome -->
     <script src="https://kit.fontawesome.com/fa04600604.js" crossorigin="anonymous"></script>
@@ -16,6 +17,7 @@
             <!-- Logo -->
             <div>
                 <a href="../index.html">
+                    <img src="../static/img/Cuevana.ico" alt="" class="cuevana-logo">
                     <span>cuevana</span>
                     <i class="fa-solid fa-5"></i>
                 </a>
@@ -43,22 +45,22 @@
             <!-- División contenedora -->
             <div>
                 <!-- Division para movie-detail espacio para dos partes una para poster y otra para descripción -->
-                <div>
+                <div class="img-desc">
                     <!-- Para poster -->
                     <div>
-                        <img src="../static/img/Señor de los anillos.jpg" alt="">
+                        <img src="../static/img/Señor de los anillos.jpg" alt="" class="img-detail">
                     </div>
                     <!-- Info -->
-                    <div>
+                    <div class="info-movie">
                         <!-- Para titulo, año, tipo -->
                         <div>
-                        <h2>The Lord of The Rings. Movie <span>(2003)</span></h2>
-                        <p>17/12/2003 • Animation, Adventure, Fantasy • 200min</p>
+                        <h2 class="title-lotr">The Lord of The Rings. Movie <span>(2003)</span></h2>
+                        <p class="info-lotr">17/12/2003 • Animation, Adventure, Fantasy • 200min</p>
                         </div>
                         <!-- Descripción de la trama -->
                         <div>
-                            <h3>Overview</h3>
-                            <p>The battle for Middle Earth has begun. Saruman's 
+                            <h3 class="overview">Overview</h3>
+                            <p class="info-overview">The battle for Middle Earth has begun. Saruman's 
                                 forces have been destroyed and for the first time 
                                 there seems to be a small hope. However, Sauron's 
                                 power grows and his interest focuses on Gondor, the
@@ -69,12 +71,12 @@
                         <!-- Créditos -->
                         <div>
                             <!-- Info director -->
-                            <div>
+                            <div class="info-director">
                                 <p>Peter Jackson</p>
                                 <p>Director</p>
                             </div>
                             <!-- Info escritor -->
-                            <div>
+                            <div class="info-escritor">
                                 <p>Philippa Boyens</p>
                                 <p>Writer</p>
                             </div>
@@ -94,7 +96,7 @@
                     <h3>Ver trailer</h3>
                     <!-- Video de tráiler -->
                     <div>
-                        <iframe type="text/html" style="background-color: #000;" width="100%" height="315" src="https://www.youtube.com/embed/r5X-hFf6Bwo?si=CzoF61B61bwvzBKs" title="YouTube video player" frameborder="0" allowfullscreen=""></iframe>
+                        <iframe class="video" type="text/html" style="background-color: #000;" width="90%" height="315" src="https://www.youtube.com/embed/r5X-hFf6Bwo?si=CzoF61B61bwvzBKs" title="YouTube video player" frameborder="0" allowfullscreen=""></iframe>
                     </div>
                 </div>
 
@@ -102,21 +104,24 @@
                 <div>
                     <!-- Lista: redes sociales 
                         se agregarán iconos-->
-                        <div>
+                        <div >
                             <ul>
-                                <li><a href="" target="_blank">Facebook</a></li>
-                                <li><a href="" target="_blank">Twiter</a></li>
-                                <li><a href="">Instagram</a></li>
-                                <li><a href="">Movie</a></li>
+                                <li><a href="./construccion.html" target="_blank" class="redes">Facebook</a></li>
+                            <ul>
+                                <li><a href="./construccion.html" target="_blank" class="redes">Twiter</a></li>
+                            <ul>
+                                <li><a href="./construccion.html" class="redes">Instagram</a></li>
+                            <ul>
+                                <li><a href="./construccion.html" class="redes">Movie</a></li>
                             </ul>
                         </div>
 
                         <!-- Tabla con más info -->
-                        <div>
+                        <div class="tabla">
                             <table>
                                 <thead>
                                     <tr>
-                                        <th colspan="2">Info</th>
+                                        <th colspan="2">More Info</th>
                                     </tr>
                                 </thead>
                                 <tbody>
