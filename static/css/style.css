@@ -509,39 +509,31 @@ y series ilimitadas */
 /* ESTILOS PARA EL FETCH */
  
 /* section */
-.peliculasTendencia{
-    width: 100%;
+#tendenciasContainer{
+    width: 80%;
     margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    justify-content: center;
-    box-sizing: border-box;
     display: grid;
-    /*division en columnas*/
-    grid-template-columns: repeat(6, 1fr);
-    /*cuantas columnas ocupa el padre*/
-    grid-column-start: 1;
-    grid-column-end: -1; 
-    /* filas */
-    grid-template-rows: 150px 1fr 1fr 1fr 1fr;
-    /*calor del gap*/
-    gap: 10px;
-
-}
-
-
-.tendenciasContainer{ 
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas con igual ancho */
+    grid-gap: 10px; /* Espacio entre las películas */
+  }
+  
+  .peliculas {
     display: flex;
-    grid-column-start: 1;
-    grid-column-end: 5; /*el numero corresponde al gap que limita la columna*/
-    
-}
-
-.peliculas{
-    display: flex;
-    grid-column-start: 1;
-    grid-column-end: -1;
-    grid-row-start: 1;
-    grid-row-end: -1;
     flex-wrap: wrap;
-}
+  }
+  
+  .pelicula {
+    flex: 0 0 calc(20% - 40px); /* Ancho de 20% con espacio entre ellas */
+    margin: 5px; /* Espacio entre las películas */
+    background-color: #0e032254;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    max-width: 300px; /* Establecí un tamaño máximo para las películas */
+    max-height: 300px; /* Establecí un tamaño máximo para las películas */
+  }
+
+  .pelicula img{
+    max-width: 100%;
+    height: auto;
+  }
