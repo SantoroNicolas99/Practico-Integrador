@@ -166,11 +166,11 @@ input{
 
 
 .submit-button {
-    display: flex;
+    display: block;
     width: 150px;
     margin-top: 10px;
     font-weight: bold;
-    margin-left: 40%;
+    margin-left: 35%;
     margin-bottom: 5px;
     padding: 0.75rem;
     background: rgb(87, 145, 212);
@@ -179,6 +179,8 @@ input{
     color: #FFF;
     position: relative;
     align-items: center;
+    text-align: center;
+    border-color: transparent;
   }
 
 footer a, .form-help a{
