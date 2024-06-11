@@ -82,6 +82,8 @@ h2{
 body{
     background-color: var(--bg-color);
     font-family: 'Nunito', sans-serif, 'poppins';
+    margin: 0;
+    padding: 0;
 }  
 
 /* Estilo que se usrá desde js para que al recorrer la página 
@@ -381,6 +383,7 @@ están en la sección  */
     .h2-subtitle{
         font-size: 5vw;
     }
+    
     .login-text{
         display: none;
     }
@@ -421,16 +424,75 @@ nav{
     align-items: center;
     height: 60px;   
     padding: 0px 50px;
+    position: relative;
 }
 
 .nav-links{
     display: flex;
     gap:30px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.menu-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 20%;
+        position: absolute;
+        top: 35px;
+        right: 10px;
+        background-color: #333;
+        border-radius: 10px;
+        z-index: 1;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 20px;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+
+
+
 /* Centra el texto que info sobre películas 
-y series ilimitadas */
+de Cuevana */
 .d-flex{
     display: flex;
     justify-content: center;
@@ -536,13 +598,13 @@ y series ilimitadas */
   
   .pelicula {
     flex: 0 0 calc(20% - 40px); /* Ancho de 20% con espacio entre ellas */
-    margin: 15px; /* Espacio entre las películas */
+    margin: 10px; /* Espacio entre las películas */
     background-color: #0e032254;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
     max-width: 200px; /* Establecí un tamaño máximo para las películas */
-    max-height: 300px; /* Establecí un tamaño máximo para las películas */
+    max-height: 360px; /* Establecí un tamaño máximo para las películas */
   }
 
   .pelicula img{
@@ -597,3 +659,4 @@ h4{
 .h2-aclamadas{
     text-align: center;
 }
+

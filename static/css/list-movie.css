@@ -1,0 +1,169 @@
+/* CSS estilos */
+/* -------------------- Estilos para list-movie -----------------------*/
+:root{
+    --bg-color:#0a0b3dfb;
+    --primary-color:#05335e;
+    --secondary-color:#aa4be9;
+    --third-color:#0571c9;
+    --third-bis-color:#591da8f2;
+    --bg-input-color:#4f31572c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1{
+    color: #FFF;
+    font-size: 2vw;
+}
+
+h2{
+    color: #FFF;
+    font-size: 2vw;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+h3{
+    color: #FFF;
+    font-size: 1.5vw;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+#logo{
+    font-weight: bold;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.logo-text, i{
+    color: #FFF;
+    font-size: 2.5vh;
+}
+
+.cuevana-logo{
+    margin-top: 10px;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: 'Nunito', sans-serif, 'poppins';
+    margin: 0;
+    padding: 0;
+}  
+
+.header{
+    background-color: transparent;
+    color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 30px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.cuevana-logo{
+    color: #FFF;
+}
+
+/* Section form */
+#form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    width: 100vw;
+    background-color: #0571c941;
+    color: #FFF;
+}
+
+#form div{
+    font-size: 1.5rem;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    }
+
+.form-select{
+    padding-inline: 1.6rem;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    padding-inline: 2rem;
+    border-radius: 5px;
+    color: #FFF;
+    background-color: var(--primary-color);
+    border-color: #FFF;
+    cursor: pointer;
+}
+
+#list {
+    height: 40vh;
+    width: 100vw;
+    margin: auto;
+    color: #FFF;
+}
+#list-table-movies{
+    height: max-content;
+    width: 80vw;
+    
+    margin: 2rem auto auto auto;
+    background-color: #5b7486af;
+}
+
+footer a, .form-help a{
+    color: #FFF;
+    
+}
+
+footer{
+    height: 1vh;
+    padding-top: 30px;
+    text-align: center;
+    
+}
