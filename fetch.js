@@ -111,6 +111,8 @@ document.querySelector('.anterior').addEventListener('click', () => {
     if (currentPage <= 1) return;
     // Cargar las películas de la página anterior
     fetchMoviesGrid(currentPage - 1);
+    // Desplazar la vista hacia el comienzo de la sección de tendencias
+    document.querySelector('.peliculasTendencia').scrollIntoView({ behavior: 'smooth' });
 });
 
 // Event listener para el botón "Siguiente"
@@ -119,6 +121,8 @@ document.querySelector('.siguiente').addEventListener('click', () => {
     let currentPage = Number(document.querySelector('.peliculasTendencia').getAttribute('data-page'));
     // Cargar las películas de la página siguiente
     fetchMoviesGrid(currentPage + 1);
+    // Desplazar la vista hacia el comienzo de la sección de tendencias
+    document.querySelector('.peliculasTendencia').scrollIntoView({ behavior: 'smooth' });
 });
 
 // Ejecutamos las funciones de carga de películas al cargar la página
